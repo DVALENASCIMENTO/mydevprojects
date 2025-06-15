@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>My Dev Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>My Dev Projects</h1>
+  <h2>Check List</h2>
+  <button onclick="abrirFormulario()">Adicionar Projeto</button>
+
+  <div id="formProjeto" class="modal hidden">
+    <input type="text" id="nome" placeholder="Nome do Projeto">
+    <input type="text" id="dev" placeholder="Desenvolvedor">
+    <input type="text" id="empresa" placeholder="Empresa">
+    <input type="date" id="data">
+    <select id="status">
+      <option value="Em andamento">Em andamento</option>
+      <option value="Concluído">Concluído</option>
+    </select>
+    <button onclick="salvarProjeto()">Salvar</button>
+    <button onclick="fecharFormulario()">Cancelar</button>
+  </div>
+
+  <ul id="listaProjetos"></ul>
+
+  <script src="db.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
